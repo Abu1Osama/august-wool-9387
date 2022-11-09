@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 80%;
+            margin: auto;
+        }
+
+        #nav {
+            display: flex;
+            /* height: 100px; */
+            justify-content: space-between;
+            width: 80%;
+            margin: auto;
+            font-weight: 800;
+            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+            margin-bottom: 35px;
+        }
+
+        .bar {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            justify-content: space-evenly;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            width: 60%;
+
+            margin-left: 20px;
+        }
+        .logo img{
+    height: 60px;
+    width: 200px;
+    
+    object-position: center center;
+        }
+
+        #btn_top {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+            
+        }
+
+        .btn_top {
+            width: 140px;
+        }
+
+        button {
+            padding: 20px 15px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+
+        }
+
+        button:hover {
+            color: white;
+            background-color: black;
+        }
+
+        .search {
+            font-size: 18px;
+            padding-left: 10px;
+            padding-right: 25px;
+            line-height: 36px;
+            border-radius: 15px;
+            align-self: center;
+
+        }
+
+        #recent_viewed {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #recent_viewed>div {
+            width: 20%;
+
+        }
+
+        #recent_viewed>div>img {
+            width: 90%;
+        }
+
+        #search_bar {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #search_bar>div>img {
+            width: auto;
+
+        }
+
+        #add_site {
+            display: flex;
+            justify-content: space-between;
+            background-color: beige;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        #add_site>div>img {
+            height: 200px;
+            width: auto;
+        }
+
+
+        .recent_viewed {
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .like {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        #patnaWay {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        #patnaWay>div>img {
+            width: 90%;
+        }
+
+        #explore {
+            background-color: #faf1ed;
+            padding: 15px 0px 30px;
+
+        }
+
+        .explore {
+            display: flex;
+            justify-content: space-evenly;
+            width: 80%;
+            margin: auto;
+            text-align: center;
+
+        }
+
+        .explore>div {
+            width: 32%;
+            background-color: white;
+
+        }
+
+        .explore>div>div>img {
+            width: 100%;
+        }
+
+        #destination {
+            width: 80%;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .desbox {
+            display: flex;
+            justify-content: space-evenly;
+            margin: auto;
+        }
+
+        .des-child>div>img {
+            width: 90%
+        }
+
+        .margin {
+            margin-left: 45px;
+        }
+        a{
+            border: 1px solid grey;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+        a:hover{
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <div class="logo">
+            <img src="https://i.ibb.co/t4t4QLC/logo-png.png" alt="">
+        </div>
+        <div class="bar">
+            <p>Review </p>
+            <p>Trips</p>
+            <p>Alerts</p>
+            <a href="">Signin</a>
+            <p>Baskets</p>
+        </div>
+
+    </div>
+    <div id="container">
+        <div id="btn_top">
+            <button class="btn_top">Hotels</button>
+            <button class="btn_top">Holiday Homes</button>
+            <button class="btn_top">Things to Do</button>
+            <button class="btn_top">Restaurants</button>
+            <button class="btn_top">Travels Stories</button>
+            <button class="btn_top">Flight</button>
+            <button class="btn_top">Cruises</button>
+            <button class="btn_top">More</button>
+        </div>
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+        <div id="search_bar">
+            <div>
+                <img src="https://www.travanya.com/wp-content/uploads/2021/12/about-india-tourism.webp" alt="">
+            </div>
+            <div>
+                <input class="search" type="text" placeholder="Where to?">
+            </div>
+        </div>
+        <div id="recent_search">
+            <h1>Your resent seraches</h1>
+            <button>Hotels</button>
+            <button>Holiday Homes</button>
+            <button>Things to Do</button>
+
+        </div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div id="history">
+    
+    <div>
+        <h1>Recently viewed</h1>
+      </div>
+        <div id="recent_viewed" class="recent_viewed">
+
+            <div class="">
+                <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/81/e4/d5.jpg"
+                    alt="">
+                <h2>Spiritual Tour of Bodhgaya</h2>
+                <p>ooooo</p>
+            </div>
+
+            <div class="">
+                <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/81/e4/d5.jpg"
+                    alt="">
+                <h2>Spiritual Tour of Bodhgaya</h2>
+                <p>ooooo</p>
+            </div>
+            <div class="">
+                <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/81/e4/d5.jpg"
+                    alt="">
+                <h2>Spiritual Tour of Bodhgaya</h2>
+                <p>ooooo</p>
+            </div>
+            <div class="">
+                <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/81/e4/d5.jpg"
+                    alt="">
+                <h2>Spiritual Tour of Bodhgaya</h2>
+                <p>ooooo</p>
+            </div>
+
+
+
+        </div>
+</div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+        <div class="patna">
+            <div>
+                <h1>Way to Patnas</h1>
+                <p>Book these experiences for a close-up look at Patna.</p>
+            </div>
+            <div id="patnaWay" class="recent_viewd">
+                <div class="">
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/c1/44/1b.jpg"
+                        alt="">
+                    <h3>Buddhist Tour From The Birth To Death</h3>
+                    <p>ooooo</p>
+                    <p>from ₹11,154 per group</p>
+                </div>
+                <div class="">
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/83/ea/54.jpg"
+                        alt="">
+                    <h3>Jain Spiritual Tour</h3>
+                    <p>ooooo</p>
+                    <p>₹49,968.77
+                        per group (up to 2)</p>
+                </div>
+                <div class="">
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/dc/15/5c.jpg"
+                        alt="">
+                    <h3>Nalanda Rajgir and Bodh Gaya </h3>
+                    <p>ooooo</p>
+                    <p>from ₹11,154 per group</p>
+                </div>
+                <div class="">
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/dc/15/70.jpg"
+                        alt="">
+                    <h3>Buddhist Pilgrimage Tour </h3>
+                    <p>ooooo</p>
+                    <p>from ₹90,925 per adult</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+        <div id="add_site">
+            <div class="margin">
+                <h3>Go Out there</h3>
+                <p>Best of the best tours,attraction &activities you wont't want to miss</p>
+                <button>See the list</button>
+            </div>
+            <div>
+                <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2016/08/incredible-india-cover.jpg"
+                    alt="">
+            </div>
+
+        </div>
+
+
+        <div class="like">
+            <div>
+                <h1>Scenic autumn spots</h1>
+            </div>
+            <div id="recent_viewed" class="recent_viewd">
+                <div class="">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/68/2b/0f/merkmal-des-dal-sees.jpg?w=1200&h=-1&s=1"
+                        alt="">
+                    <h2>Dal Lake</h2>
+                    <p>ooooo</p>
+                    <p>Bodies of water</p>
+                </div>
+                <div class="">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/f3/ed/05/as-the-spring-has-set.jpg?w=700&h=-1&s=1"
+                        alt="">
+                    <h2>Dal Lake</h2>
+                    <p>ooooo</p>
+                    <p>Bodies of water</p>
+                </div>
+                <div class="">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/68/2b/0f/merkmal-des-dal-sees.jpg?w=1200&h=-1&s=1"
+                        alt="">
+                    <h2>Dal Lake</h2>
+                    <p>ooooo</p>
+                    <p>Bodies of water</p>
+                </div>
+                <div class="">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/f3/ed/05/as-the-spring-has-set.jpg?w=700&h=-1&s=1"
+                        alt="">
+                    <h2>Dal Lake</h2>
+                    <p>ooooo</p>
+                    <p>Bodies of water</p>
+                </div>
+                <div class="">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/68/2b/0f/merkmal-des-dal-sees.jpg?w=1200&h=-1&s=1"
+                        alt="">
+                    <h2>Dal Lake</h2>
+                    <p>ooooo</p>
+                    <p>Bodies of water</p>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <div id="explore">
+        <h2>More to Explore</h2>
+        <div class="explore">
+            <div>
+                <div><img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/be/f9/13/caption.jpg?w=800&h=-1&s=1&cx=4128&cy=2752&chk=v1_366898c67adfaa1ca2a5"
+                        alt=""></div>
+                <h3>From SastaSafar</h3>
+                <h3>5 beautiful hill station in South India</h3>
+            </div>
+            <div>
+                <div><img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/bf/21/0f/caption.jpg?w=800&h=-1&s=1&cx=2880&cy=1920&chk=v1_d206a284991363e391da"
+                        alt=""></div>
+                <h3>From SastaSafar</h3>
+                <h3>11 beautiful places in India that have to be seen to be believed</h3>
+            </div>
+            <div>
+                <div><img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/c8/2e/9a/2520956e-5665-4e9f.jpg?w=400&h=-1&s=1"
+                        alt=""></div>
+                <h3>From SastaSafar</h3>
+                <h3>Best time to visit Dubai for great weather and deals</h3>
+            </div>
+        </div>
+
+
+    </div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+    <div id="destination">
+        <div>
+            <h2>Top destinations for beach lovers</h2>
+            <h4>Recommended based on your activity</h4>
+        </div>
+        <div class="desbox">
+
+            <div class="des-child">
+                <div>
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/60/b0/bd/bora-bora.jpg?w=600&h=400&s=1"
+                        alt="">
+                </div>
+
+            </div>
+            <div class="des-child">
+                <div>
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/33/f7/dd/caption.jpg?w=600&h=-1&s=1"
+                        alt="">
+                </div>
+
+            </div>
+
+            <div class="des-child">
+                <div>
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/60/b0/bd/bora-bora.jpg?w=600&h=400&s=1"
+                        alt="">
+                </div>
+
+            </div>
+
+            <div class="des-child">
+                <div>
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/60/b0/bd/bora-bora.jpg?w=600&h=400&s=1"
+                        alt="">
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
