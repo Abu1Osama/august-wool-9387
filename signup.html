@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #create{
+            /* border: 1px solid green; */
+            width: 500px;
+            margin: auto;
+            padding: 60px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+        div{
+         margin-top: 15px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            /* width: 400px; */
+            /* border: 1px solid red; */
+            margin: auto;
+        }
+        .name{
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid orange; */
+
+        }
+        .moj{
+            display: flex;
+            flex-direction: column;
+            width: 47%;
+        }
+        input{
+            padding: 4px 4px 4px 8px;
+            border: 2px solid rgb(238, 235, 235);
+            height: 40px;
+            border-radius: 6px;
+        }
+        .text{
+            margin-top: 8px;
+            margin-bottom: 8px;
+            text-align: left;
+            font-weight: 700;
+
+        }
+        img{
+            width: 20%;
+            vertical-align: text-top;
+        }
+        .checkbox{
+            display: block;
+           
+        }
+       .btn{
+    
+    background: #000;
+    border-radius: 28px;
+    padding: 18px 10px;
+    font-size: 16px;
+    color: white;
+    display: block;
+margin: auto;
+width: 60%;
+        }
+      .line{
+      text-align: center;
+       margin-top: 20px;
+    margin-bottom: 16px;
+      }
+    </style>
+</head>
+
+<body>
+    <div id="create">
+        <div>
+             <img src="https://i.ibb.co/zJ7vpX6/Logoo.png" alt="">
+        </div>
+        <div>
+           <h1> Join to unlock the  best <br> of SastaSafar</h1></div>
+        <form action="#">
+            <div class="name">
+               <div class="moj">
+                <label class="text" for="">First Name</label>
+
+                <input type="text" id="firstname" placeholder="First Name" required/>
+               </div>
+                <div class="moj">
+                    <label class="text" for="">Last Name</label>
+
+                <input type="text" id="lastname" placeholder="Last Name"required />
+                </div>
+            </div>
+            <label class="text" for="">Email</label>
+
+            <input type="text" id="email" placeholder="Email" required/>
+            <label class="text" for="">Create a password</label>
+
+            <input type="password" id="password" placeholder="Password" required/>
+            <div class="checkbox">
+                <input type="checkbox" required>
+                <label class="text" for="">Yes, inform me on deals & new features. I can opt out at any time</label>
+            </div>
+            <div >
+                <button onclick="signup()" class="btn">Join</button>
+            </div>
+          <span class="line"> <a href="signin.html">Already a member?</a> </span>
+
+
+
+          
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>
+<script src="cred.js"></script>
