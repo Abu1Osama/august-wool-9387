@@ -10,18 +10,26 @@
         #container {
             width: 80%;
             margin: auto;
+            margin-top: 100px;
         }
 
         #nav {
             display: flex;
             /* height: 100px; */
             justify-content: space-between;
-            width: 80%;
             margin: auto;
             font-weight: 800;
             box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-            margin-bottom: 35px;
-        }
+            padding: 10px;
+    align-items: center;
+    position: fixed;
+    background: white;
+    width: 100%;
+    top: 0;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(45px);
+}
+        
 
         .bar {
             display: flex;
@@ -73,13 +81,24 @@
 
         .search {
             font-size: 18px;
-            padding-left: 10px;
-            padding-right: 25px;
-            line-height: 36px;
+        
             border-radius: 15px;
             align-self: center;
+            padding: 10px 20px;
+    width: 300px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+.search_div{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
 
-        }
+
+        
 
         #recent_viewed {
             display: flex;
@@ -100,6 +119,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
         }
 
         #search_bar>div>img {
@@ -215,7 +235,7 @@
     </div>
     <div id="container">
         <div id="btn_top">
-            <button class="btn_top">Hotels</button>
+         <a href="hotel.html">   <button  class="btn_top">Hotels</button></a>
             <button class="btn_top">Holiday Homes</button>
             <button class="btn_top">Things to Do</button>
             <button class="btn_top">Restaurants</button>
@@ -230,8 +250,8 @@
             <div>
                 <img src="https://www.travanya.com/wp-content/uploads/2021/12/about-india-tourism.webp" alt="">
             </div>
-            <div>
-                <input class="search" type="text" placeholder="Where to?">
+            <div class="search_div">
+                <input onclick="sign()"class="search" type="text" placeholder="Where to?">
             </div>
         </div>
         <div id="recent_search">
@@ -468,3 +488,7 @@
 </body>
 
 </html>
+<script>
+    
+    
+</script>
