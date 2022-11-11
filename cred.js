@@ -14,8 +14,4 @@ if(localStorage.getItem("cred")===null){
             password:document.getElementById("password").value,
         } 
     }
-
-
-
-
    

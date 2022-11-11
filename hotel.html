@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
         
 #nav {
             display: flex;
@@ -64,8 +66,9 @@
             justify-content: space-evenly;
             width: 90%;
             margin: auto;
-            border: 1px solid red;
+            /* border: 1px solid red; */
             margin-top: 25px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         }
         #page:hover{
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -73,7 +76,7 @@
         }
         
         #right_box{
-            border: 1px solid blue;
+            /* border: 1px solid blue; */
             width: 60%;
             padding: 10px;
         }
@@ -95,6 +98,7 @@
             flex-direction: column;
             align-items: center;
             font-weight: 700;
+            border-right: 1px solid rgb(219, 217, 217);
 
         }
         #details{
@@ -133,10 +137,13 @@
             display: grid;
             grid-template-columns: repeat(2,200px);
             margin: 5px 0px;
+            font-weight: 500;
         }
-        #hotel{
+        #hotels{
             margin-top: 100px;
         }
+
+        
     </style>
 </head>
 
@@ -203,7 +210,7 @@
             {
                 name: "2. The Park Kolkata",
                 price: "$101",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/b5/f4/d3/gym.jpg?w=1100&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d301637-Reviews-The_Park_Kolkata-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/booking%20logo.png",
@@ -234,7 +241,7 @@
             {
                 name: "3. Polo Floatel Kolkata",
                 price: "$49",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/70/b9/34/polo-floatel-kolkata.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d23661585-Reviews-Polo_Floatel_Kolkata-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/expedia2021_384164.png",
@@ -265,7 +272,7 @@
             {
                 name: "4. Fairfield by Marriott Kolkata",
                 price: "$92",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/3a/c4/65/vertex-the-liquid-restaurant.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d19268191-Reviews-Fairfield_by_Marriott_Kolkata-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Hotelscom_384x164.png",
@@ -296,7 +303,7 @@
             {
                 name: "5. Lemon Tree Premier, New Town, Kolkata",
                 price: "$77",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/46/5a/e8/lemon-tree-premier-new.jpg?w=1100&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d19139149-Reviews-Lemon_Tree_Premier_New_Town_Kolkata-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/booking%20logo.png",
@@ -325,7 +332,7 @@
             {
                 name: "6. The Lalit Great Eastern Kolkata",
                 price: "$126",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d2/51/7c/exterior-at-the-lalit.jpg?w=1100&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d1155602-Reviews-The_Lalit_Great_Eastern_Kolkata-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Hotelscom_384x164.png",
@@ -356,7 +363,7 @@
             {
                 name: "7. ITC Royal Bengal, a Luxury Collection Hotel, Kolkata",
                 price: "$158",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/a2/4e/0e/hotel-facade.jpg?w=900&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d17378938-Reviews-ITC_Royal_Bengal_a_Luxury_Collection_Hotel_Kolkata-Kolkata_Calcutta_Kolkata_District_.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Hotelscom_384x164.png",
@@ -387,7 +394,7 @@
             {
                 name: "8. Novotel Kolkata Hotel and Residences",
                 price: "$103",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/f8/0a/62/hotel-facade-night.jpg?w=1100&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d6509623-Reviews-Novotel_Kolkata_Hotel_and_Residences-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Hotelscom_384x164.png",
@@ -418,7 +425,7 @@
             {
                 name: "9. Ibis Kolkata Rajarhat",
                 price: "$49",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/cf/7e/69/exterior-view.jpg?w=1100&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d15116824-Reviews-Ibis_Kolkata_Rajarhat-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Ibis2.gif",
@@ -449,7 +456,7 @@
             {
                 name: "10. Holiday Inn Express Kolkata Airport, an IHG Hotel",
                 price: "$75",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/5a/ef/d1/hotel-facade.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d17542202-Reviews-Holiday_Inn_Express_Kolkata_Airport_an_IHG_Hotel-Kolkata_Calcutta_Kolkata_District_We.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Hotelscom_384x164.png",
@@ -480,7 +487,7 @@
             {
                 name: "11. Siamton Inn",
                 price: "$70",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/e7/0c/ae/jameson-inn-shiraz.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d2556609-Reviews-Siamton_Inn-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Hotelscom_384x164.png",
@@ -509,7 +516,7 @@
             {
                 name: "12. Howard Johnson by Wyndham Kolkata",
                 price: "$64",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5e/75/14/img-20191223-wa0045-largejpg.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d12802809-Reviews-Howard_Johnson_by_Wyndham_Kolkata-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Hotelscom_384x164.png",
@@ -540,7 +547,7 @@
             {
                 name: "13. Regenta Orko's Kolkata by Royal Orchid Hotels Ltd",
                 price: "$60",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/db/85/f0/orko-s-hotel.jpg?w=1100&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d6878266-Reviews-Regenta_Orko_s_Kolkata_by_Royal_Orchid_Hotels_Ltd-Kolkata_Calcutta_Kolkata_District_We.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/booking%20logo.png",
@@ -568,7 +575,7 @@
             {
                 name: "14. Ibiza The Fern Resort & Spa",
                 price: "$92",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/26/93/2d/img-20190720-wa0027-largejpg.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d1769311-Reviews-Ibiza_The_Fern_Resort_Spa-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Hotelscom_384x164.png",
@@ -597,7 +604,7 @@
             {
                 name: "15. Kenilworth Hotel, Kolkata",
                 price: "$115",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/16/07/67/kenilworth-hotel-kolkata.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d1380869-Reviews-Kenilworth_Hotel_Kolkata-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/booking%20logo.png",
@@ -628,7 +635,7 @@
             {
                 name: "16. Senses Hotel",
                 price: "$48",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/8e/78/ed/the-bed.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d6639434-Reviews-Senses_Hotel-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/expedia2021_384164.png",
@@ -658,7 +665,7 @@
             {
                 name: "17. The Peerless Inn",
                 price: "$73",
-                image: "",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/d8/ec/61/hotel-facade.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d308575-Reviews-The_Peerless_Inn-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Hotelscom_384x164.png",
@@ -689,7 +696,7 @@
             {
                 name: "18. The Astor Hotel Kolkata",
                 price: "$85",
-                image: "",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/b4/73/41/suite--v17337645.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d308571-Reviews-The_Astor_Hotel_Kolkata-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/booking%20logo.png",
@@ -720,7 +727,7 @@
             {
                 name: "19. Ethnotel",
                 price: "$55",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/de/00/7a/ethnotel.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d7160727-Reviews-Ethnotel-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/booking%20logo.png",
@@ -751,7 +758,7 @@
             {
                 name: "20. OYO 8863 Hotel Sigma",
                 price: "$7",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/bf/3d/8e/oyo-8863-hotel-sigma.jpg?w=1000&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d12652938-Reviews-OYO_8863_Hotel_Sigma-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/booking%20logo.png",
@@ -770,7 +777,7 @@
             {
                 name: "21. Hotel Hindusthan International Kolkata",
                 price: "$77",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/eb/d1/9d/swimming-pool-area.jpg?w=900&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d1173522-Reviews-Hotel_Hindusthan_International_Kolkata-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Hotelscom_384x164.png",
@@ -800,7 +807,7 @@
             {
                 name: "22. Vedic Village Spa Resort",
                 price: "$79",
-                image: "",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/c4/f1/bb/img-20190811-wa0000-largejpg.jpg?w=1100&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d734588-Reviews-Vedic_Village_Spa_Resort-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/expedia2021_384164.png",
@@ -829,7 +836,7 @@
             {
                 name: "23. The Lindsay",
                 price: "$48",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/98/e8/ac/hotel-lindsay.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d658868-Reviews-The_Lindsay-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/expedia2021_384164.png",
@@ -858,7 +865,7 @@
             {
                 name: "24. Zone By The Park Kolkata",
                 price: "$52",
-                image: "",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/f2/29/c2/getlstd-property-photo.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d15695308-Reviews-Zone_By_The_Park_Kolkata-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/booking%20logo.png",
@@ -883,7 +890,7 @@
             {
                 name: "25. Beyzaa Hotel And Suites",
                 price: "$55",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/e3/bd/3f/beyzaa-hotel-and-suites.jpg?w=1100&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d23268433-Reviews-Beyzaa_Hotel_And_Suites-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Hotelscom_384x164.png",
@@ -914,7 +921,7 @@
             {
                 name: "26. Kempton Hotel",
                 price: "$67",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/78/c4/18/kempton-hotel.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d2391617-Reviews-Kempton_Hotel-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Hotelscom_384x164.png",
@@ -936,7 +943,7 @@
             {
                 name: "27. Palm Village Resort",
                 price: "$34",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/40/fd/68/palm-village-resort.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d609739-Reviews-Palm_Village_Resort-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/expedia2021_384164.png",
@@ -958,7 +965,7 @@
             {
                 name: "28. Sapphire Suites",
                 price: "$71",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/b4/1f/04/sapphire-deluxe--v17337897.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d2526012-Reviews-Sapphire_Suites-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/booking%20logo.png",
@@ -988,7 +995,7 @@
             },
             {
                 name: "29. The Westin Kolkata Rajarhat",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/3c/0d/b6/exterior.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d12955488-Reviews-The_Westin_Kolkata_Rajarhat-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Hotelscom_384x164.png",
@@ -1019,7 +1026,7 @@
             {
                 name: "30. Taj Bengal Kolkata",
                 price: "$202",
-                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9c/01/guest-room.jpg?w=1200&h=-1&s=1",
+                image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/86/84/7d/pool.jpg?w=1200&h=-1&s=1",
                 image_url:
                     "https://www.tripadvisor.in/Hotel_Review-g304558-d302163-Reviews-Taj_Bengal_Kolkata-Kolkata_Calcutta_Kolkata_District_West_Bengal.html",
                 logo: "https://static.tacdn.com/img2/branding/hotels/Hotelscom_384x164.png",
@@ -1060,15 +1067,20 @@
             image_div.id="left_box"
             let image = document.createElement("img")
             image.id = "mainLogo"
+            image.onclick=function open(){
+                op()
+
+            }
             image.setAttribute("src", element.image)
+            image.style.cursor="pointer"
 
 
             let div = document.createElement("div")
             div.id="right_box"
 
             let title_div = document.createElement("div")
-            title_div.style.border="1px solid red"
-            let name = document.createElement("h2")
+            title_div.style.borderBottom="1px solid#d1c8c8"
+                let name = document.createElement("h2")
             name.innerText = element.name
 // console.log(element.amenity);
             let child_div = document.createElement("div")
@@ -1076,7 +1088,7 @@
             let content_div = document.createElement("div")
             content_div.id="content_div"
             let price=document.createElement("h3")
-            price.innerText=element.price
+            price.innerText="Start from"+":- "+element.price
             let logo_pic = document.createElement("img")
             logo_pic.id = "logo"
             logo_pic.setAttribute("src", element.logo)
@@ -1088,6 +1100,7 @@
 
             let facility_div = document.createElement("div")
             facility_div.classList.add("amenity")
+           
             element.amenity.forEach(el => {
                  let amenity = document.createElement("p")
             amenity.innerText = el
@@ -1112,6 +1125,9 @@
         });
 
 
+    }
+    function op(){
+        window.location="hotel_details.html"
     }
 
    
