@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+#nav {
+            display: flex;
+            /* height: 100px; */
+            justify-content: space-between;
+            margin: auto;
+            font-weight: 800;
+            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+            padding: 10px;
+    align-items: center;
+    position: fixed;
+    background: white;
+    width: 100%;
+    top: 0;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(45px);
+}
+        
+        #logo {
+            width: 30%;
+            object-fit: contain;
+        }
+        .logo img{
+    height: 60px;
+    width: 200px;
+    
+    object-position: center center;
+        }
+        #main-div{
+            border: 1px solid red;
+            /* width: 80%; */
+            margin: auto;
+            margin-top: 100px;
+        }
+        #top-div{
+           display: grid;
+           grid-template-columns: repeat(2,auto);
+            justify-content: space-evenly;
+            height: 600px;
+        }
+        
+        #right-div img{
+            /* width: 800px; */
+            height: 600px;
+           
+        }
+        .logo{
+    height: 60px;
+    width: 150px;
+    
+    object-position: center center;
+        }
+        
+        .bar {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            justify-content: space-evenly;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            width: 60%;
+
+            margin-left: 20px;
+        }
+        #site-mrp{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            margin: auto;
+        }
+        #about-bottom{
+            display: flex;
+            /* width: 60%; */
+            justify-content: space-between;
+        }
+        #about-bottom>div{
+            width: 48%;
+        }
+        #R1>div{
+            
+        }
+        #left-div{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 400px;
+            height: 400px;
+        }
+        #date input{
+            padding: 10px;
+            margin: 5px;
+        }
+       
+        
+        .book {
+            padding: 20px 25px;
+            background-color: #f2b203;
+            border: none;
+            line-height: 20px;
+            font-size: 16px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 90%;
+
+            /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+
+
+        }
+
+        .book:hover {
+            color: white;
+            background-color: black;
+        }
+        #R1{
+            text-align: center;
+              box-shadow: rgba(227, 226, 226, 0.1) 0px 4px 12px;
+        }
+           
+       #bottom-div{
+        width: 60%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+border-bottom:1px solid grey;
+        }
+        #l1{
+border-right: 1px solid  rgb(228, 224, 224);
+        }
+        #R1{
+            border-left: 1px solid  rgb(228, 224, 224);
+
+        }
+        #heading{
+            border-bottom:1px solid rgb(228, 224, 224);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div class="logo">
+            <img src="https://i.ibb.co/t4t4QLC/logo-png.png" alt="">
+            <input onclick="sign()" class="search" type="text"  placeholder=search>
+        
+        </div>
+        <div class="bar">
+                
+            <p>Review </p>
+            <p>Trips</p>
+            <p>Alerts</p>
+            <a href="signin.html">Signin</a>
+            <p>Baskets</p>
+        </div>
+    </div>
+<div id="main-div">
+    <div id="top-div">
+        <div id="left-div">
+<div id="date">
+    <input type="date">
+    <input type="date">
+</div>
+<div id="site-mrp">
+    <img class="logo" src="https://static.tacdn.com/img2/branding/hotels/booking%20logo.png" alt="">
+    <p>$126</p>
+
+</div>
+<div>
+    <button class="book">View deal</button>
+</div>
+        </div>
+        <div id="right-div">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/f8/0a/62/hotel-facade-night.jpg?w=1100&h=-1&s=1" alt="">
+    
+        </div>
+    </div>
+    <div id="bottom-div">
+        <div id="heading">
+            <h1>About</h1>
+        </div>
+        <div id="about-bottom">
+            <div id="l1">
+                <p>Rating</p>
+                <h1>4.0 very good</h1>
+                <p> The Oberoi Grand, fondly referred as the 'Grande Dame of Chowringhee' offers the ultimate classical residence in the City of Joy. This heritage hotel’s neo-classical facade and grand pillared entrance mark a successful fusion of classical Victorian and traditional Indian style and reflect the city’s colonial history.Standing stately for over 125 years, The Oberoi Grand combines classic architecture and charm with state of the art amenities and facilities, offering guests an oasis of tranquility amidst the bustling city.The hotel features elegantly appointed rooms, equipped with all modern facilities blending uniquely with the colonial architecture.The hotel is located in the main business and shopping district of Kolkata (Park Street, BBD Bag, and Chowringhee) and is in walking distance from most corporate and government offices. It is also conveniently located close to major convention centers, legislative offices, banks, Consulates, Deputy High Commissions, Chambers of Commerce and clubs. This ideal location makes the hotel a perfect base for the business and the leisure traveler.The dining options at the hotel provide a great opportunity to savor cuisines from around the globe. Recreational facilities include an outdoor swimming pool, a fitness centre and a full service Oberoi Spa.The city centre location makes the hotel an ideal conference and meetings venue. The options vary from a spectacular ballroom for large conferences and smaller meeting rooms for business gatherings and seminars. A 24 hour business centre fully equipped with modern facilities includes a meeting room along with secretarial services.",
+                </p>
+
+            </div>
+            <div id="R1">
+                <div>
+                    <h3>Properties amenities</h3>
+
+                    <p>Free internet</p>
+                    <p>Pool</p>
+                    <p>Fitness Centre with Gym / Workout Room</p>
+                    <p>Bar / lounge</p>
+                    <p>Babysitting</p>
+                    <p>Children Activities (Kid / Family Friendly)</p>
+                    <p>Airport transportation</p>
+                </div>
+                <div>
+                    <h3>Room features</h3>
+                 <p>Allergy-free room</p>
+                 <p>Soundproof rooms</p>
+                 <p>Air conditioning</p>
+                 <p>Housekeeping</p>
+                 <p>Room service</p>
+                 <p>Safe</p>
+                 <p>Miniba</p>
+                 <p>Flatscreen TV</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+    
+</body>
+</html>
