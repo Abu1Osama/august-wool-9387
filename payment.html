@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+      form{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+      
+    border-radius: 20px;
+    border: 2px solid rgb(209, 200, 200);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+      #btn{
+        /* width: 50%; */
+        margin: auto;
+        padding: 5px 20px;
+        background-color: rgb(26, 49, 255);
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #page{
+        width: 600px;
+        margin: auto;
+        
+    border-radius: 20px;
+
+      }
+      input{
+        margin: 10px;
+        font-size: 25px;
+        border-radius: 6px;
+        padding: 4px;
+      }
+      .line{
+        display: flex;
+
+      }
+      #head{
+        text-align: center;
+        color: teal;
+        font-size: 40px;
+        text-decoration: underline;
+        margin: 15px 5px;
+      }
+     
+    </style>
+</head>
+<body>
+   <div id="page">
+    <h1 id="head">Card Details</h1>
+    <form action="otp.html">
+      <div>
+        <h2>Card Number</h2>
+        <input type="number" placeholder="card number" required>
+      </div>
+       <div class="line">
+        <div>
+            <h2>CVV Code</h2>
+            <input type="number" placeholder="CVV" required>
+           </div>
+           <div>
+            <h2>Expiry date</h2>
+            <input type="date" required>
+           </div>
+       </div>
+       <div>
+        <h2>Name on Card</h2>
+        <input type="text" placeholder="Name" required>
+       </div>
+        <input id="btn" type="submit">
+  
+</form>
+   </div>
+    
+</body>
+</html>
