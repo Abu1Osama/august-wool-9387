@@ -1,971 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-        #container {
-            width: 90%;
-            margin: auto;
-            margin-top: 100px;
-        }
-
-        #nav {
-            display: flex;
-    /* height: 100px; */
-    justify-content: space-between;
-    /* margin: auto; */
-    font-weight: 800;
-    padding: 10px;
-    align-items: center;
-    position: fixed;
-    background: white;
-    width: 100%;
-    top: 0;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(45px);
-    z-index: 5;
-    left: 0;
-    box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-        }
-
-
-        .bar {
-            display: flex;
-    align-items: center;
-    justify-content: right;
-    gap: 30px;
-}
-
-        
-
-        .bar a {
-            display: flex;
-            font-weight: 600;
-            text-decoration: none;
-            gap: 10px;
-            color: black;
-
-        }
-
-        .bar a:hover {
-            fill: #d26548;
-            color: #d26548;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            width: 60%;
-
-            margin-left: 20px;
-        }
-
-        .logo img {
-            height: 60px;
-            width: 200px;
-
-            object-position: center center;
-        }
-
-        #btn_top {
-            display: flex;
-            justify-content: center;
-            margin: 10px;
-            gap: 15px;
-
-        }
-
-        .btn_top {
-            display: flex;
-            justify-content: center;
-            border-radius: 10px;
-            align-items: center;
-            padding: 10px 15px;
-            gap: 15px;
-            text-decoration: none;
-            font-weight: 600;
-
-            border-radius: 8px;
-        }
-
-        .btn_top1 {
-            color: #427067;
-
-            background: #FFFFFF;
-            border: 1px solid #427067;
-
-        }
-
-        .btn_top1:hover {
-            background: #427067;
-            color: white;
-        }
-
-        .btn_top:hover path {
-            fill: white;
-        }
-
-
-        .btn_top2 {
-
-            background: #FFFFFF;
-            border: 1px solid #5D6C00;
-            color: #5D6C00;
-        }
-
-        .btn_top2:hover {
-            background: #5D6C00;
-            color: white;
-        }
-
-        .btn_top3 {
-            background: #FFFFFF;
-            border: 1px solid #A13000;
-            color: #A13000;
-
-        }
-
-        .btn_top3:hover {
-            background: #A13000;
-            color: white;
-
-        }
-
-        .btn_top4 {
-            background: #FFFFFF;
-            border: 1px solid #004C6C;
-            color: #004C6C;
-        }
-
-        .btn_top4:hover {
-            background: #004C6C;
-            color: white;
-        }
-
-        .btn_top5 {
-            background: #FFFFFF;
-            border: 1px solid #3C3043;
-            color: #3C3043;
-        }
-
-        .btn_top5:hover {
-            background: #3C3043;
-            color: white;
-
-        }
-
-        .btn_top6 {
-            background: #FFFFFF;
-            border: 1px solid #5D006C;
-            color: #5D006C;
-        }
-
-        .btn_top6:hover {
-            background: #5D006C;
-            color: white;
-        }
-
-        /* button {
-            padding: 20px 15px;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
-
-        } */
-
-        button:hover {
-            color: white;
-            background-color: black;
-        }
-
-        .search {
-            font-weight: bold;
-
-            align-self: center;
-            padding: 10px 20px;
-            backdrop-filter: blur(10px);
-            width: 500px;
-            background: rgba(255, 255, 255, 0.8);
-            box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-            border-radius: 8px;
-        }
-
-        .search::placeholder {
-            color: #31283B;
-
-        }
-
-        .search_div {
-            position: absolute;
-            transform: translate(-50%, -50%);
-            left: 50%;
-            top: 50%;
-        }
-
-
-
-
-        #recent_viewed {
-            display: flex;
-            gap: 20px;
-            /* border: 1px solid blue; */
-        }
-
-        #recent_viewed>div {
-            width: 24%;
-            /* border: 1px solid red; */
-
-        }
-
-        #recent_viewed>div>img {
-            width: 100%;
-            height: 250px;
-        }
-
-        #search_bar {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            height: 400px;
-            width: 100%;
-            background: url(image/background.png);
-            background-repeat: no-repeat;
-            background-position: center;
-            border-radius: 8px;
-        }
-
-        .search-pic {
-            background: red;
-        }
-
-      
-            #add_site {
-    display: flex;
-    justify-content: space-between;
-    background-color: #004C6C;
-    align-items: center;
-    margin-top: 40px;
-    color: white;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-        
-
-        #add_site>div>img {
-            height: 200px;
-            width: auto;
-        }
-
-
-        .recent_viewed {
-            display: flex;
-            justify-content: space-between;
-            text-align: center;
-
-        }
-
-
-
-        #patnaWay {
-            display: flex;
-            justify-content: space-between;
-            /* border: 1px solid green; */
-            text-align: center;
-
-        }
-
-        #patnaWay>div {
-            width: 24%;
-            /* border: 1px solid red; */
-        }
-
-        #patnaWay>div>img {
-            width: 100%;
-            height: 250px;
-        }
-
-        #explore {
-    width: 90%;
-    background-color: #004C6C;
-    padding: 15px 0px 30px;
-    border-radius: 8px;
-    margin: auto;
-}
-#explore h2{
-    color: white;
-    margin: 20px auto;
-    width: max-content;
-}
-
-
-
-
-
-        .explore {
-            display: flex;
-            justify-content: space-evenly;
-            width: 90%;
-            margin: auto;
-            text-align: center;
-
-        }
-
-        .explore>div {
-    width: 32%;
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-}
-        .explore>div>div>img {
-    width: 100%;
-    height: 320px;
-}
-
-        #destination {
-            width: 90%;
-            margin: auto;
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
-
-        .desbox {
-            display: flex;
-            justify-content: space-between;
-            margin: auto;
-        }
-
-        .desbox>div {
-            width: 24%;
-            /* border: 1px solid red; */
-        }
-
-        .des-child>div>img {
-            width: 100%;
-            height: 300px;
-    
-        }
-
-        .margin {
-            margin-left: 45px;
-        }
-
-
-
-
-        .like {
-            margin-top: 50px;
-            margin-bottom: 50px;
-            /* border: 1px solid orange; */
-            
-        }
-
-        #Lake {
-            display: flex;
-            justify-content: space-evenly;
-            /* border: 1px solid orange; */
-            text-align: center;
-        }
-
-        .lake-child img {
-            width: 100%;
-            height: 200px;
-
-        }
-
-        .lake-child {
-            width: 19%;
-            /* border: 1px solid red; */
-
-        }
-
-        .lake-child p {
-            margin-left: 5px;
-
-        }
-        .lake-child:hover{
-            box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 20%);
-    border-radius: 8px;
-    overflow: hidden;
-        }
-
-        #bottom {
-            background-color: #004f32;
-            display: flex;
-            justify-content: space-evenly;
-            height: 500px;
-        }
-        #recent_search>div{
-            display: flex;
-            gap: 25px;
-
-        }
-
-        #recent_search button {
-            padding: 20px 25px;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-        }
-        #poster{
-            width: 60%;
-        }
-        .poster_logo{
-            width: 250px;
-            height: auto;
-            text-align: center;
-            color: white;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        .poster_logo img{
-           width: 200px;
-           height: 200px;
-
-        }
-        .poster_logo button{
-            padding: 10px 20px;
-            border: none;
-            background: black;
-            color: white;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 16px;
-            cursor: pointer;
-
-        }
-        p{
-            font-weight: 600;
-        }
-
-
-        @media screen and (min-width:701px) and (max-width:1000px) {
-      /* Here Write all the necessery styles for Medium Screen size  */
-      #recent_viewed{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-
-      }
-      #recent_viewed>div{
-       width: 100%;
-
-      }
-      #patnaWay{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-      }
-      #patnaWay>div{
-        width: 100%;
-      }
-      #add_site{
-        flex-direction: column;
-        text-align: center;
-        justify-content: space-between;
-      }
-      #Lake{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 20px;
-      }
-      .lake-child{
-        width: 100%;
-      }
-      
-      
-
-  }
-    
-
-    @media screen and (min-width:100px) and (max-width:700px) {
-      /* Here Write all the necessery styles for Small Screen size  */
-      #recent_viewed{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        justify-content: center;
-        
-      }
-      #recent_viewed>div{
-       width: 100%;
-
-      }
-      #patnaWay{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-      }
-      #patnaWay>div{
-        width: 100%;
-      }
-      #add_site{
-        flex-direction: column;
-      }
-      #Lake{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-      }
-      .lake-child{
-        width: 100%;
-      }
-
-.bar{
-    display: none;
-}
-#btn_top{
-    flex-wrap: wrap;
-}
-.btn_top{
-    flex-grow: 2;
-}
-.search{
-    width: 200px;
-}
-#search_bar{
-    height: 200px;
-}
-.explore{
-    flex-direction: column;
-}
-.explore>div{
-    width: 100%;
-}
-.desbox{
-    flex-direction: column;
-    gap: 10px;
-}
-.desbox>div {
-    width: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-}
- #bottom{
-    width: 100%;
-    flex-direction: column;
-    height: 700px;
-}
-.poster_logo{
-    margin: auto;
-}
-.explore p{
-    padding: 0px 10px;
-}
-
-     
-   
-    }
-        
-    </style>
-</head>
-
-<body>
+  <body>
     <div id="nav">
-        <a href="index.html" class="logo">
-            <img src="image/logo_name.png" alt="">
+      <a href="index.html" class="logo">
+        <img src="image/logo_name.png" alt="" />
+      </a>
+      <div class="bar">
+        <a href="#">
+          <svg
+            viewBox="0 0 24 24"
+            width="24px"
+            height="24px"
+            class="d Vb UmNoP"
+          >
+            <path
+              d="M3.366 21.984a1.36 1.36 0 01-1.067-.513 1.352 1.352 0 01-.266-1.148l1.445-6.637 10.249-10.22c1.625-1.62 4.352-1.939 6.153-.674a4.8 4.8 0 012.098 3.518 4.756 4.756 0 01-1.384 3.833l-10.326 10.32-6.902 1.521zm2.038-7.245l-1.069 4.906 4.875-1.103 7.909-7.902-3.796-3.797-7.919 7.896zm9.41-9.382l3.794 3.795.499-.499a2.662 2.662 0 00.775-2.144c-.076-.81-.502-1.514-1.196-1.982-1.029-.724-2.549-.49-3.472.431l-.4.399z"
+            ></path>
+          </svg>
+          <span>Review</span>
         </a>
-        <div class="bar">
-            <a href="#">
-                <svg viewBox="0 0 24 24" width="24px" height="24px" class="d Vb UmNoP">
-                    <path
-                        d="M3.366 21.984a1.36 1.36 0 01-1.067-.513 1.352 1.352 0 01-.266-1.148l1.445-6.637 10.249-10.22c1.625-1.62 4.352-1.939 6.153-.674a4.8 4.8 0 012.098 3.518 4.756 4.756 0 01-1.384 3.833l-10.326 10.32-6.902 1.521zm2.038-7.245l-1.069 4.906 4.875-1.103 7.909-7.902-3.796-3.797-7.919 7.896zm9.41-9.382l3.794 3.795.499-.499a2.662 2.662 0 00.775-2.144c-.076-.81-.502-1.514-1.196-1.982-1.029-.724-2.549-.49-3.472.431l-.4.399z">
-                    </path>
-                </svg>
-                <span>Review</span>
-            </a>
-            <a href="#">
-                <svg viewBox="0 0 24 24" width="24px" height="24px" class="d Vb UmNoP">
-                    <path
-                        d="M12.001 20.729s-6.741-5.85-8.485-8.003c-2.055-2.541-2.018-5.837.089-7.836a5.928 5.928 0 014.104-1.618c1.548 0 3.005.575 4.104 1.618l.174.165.162-.155a5.93 5.93 0 014.104-1.618c1.548 0 3.005.574 4.104 1.618 2.158 2.049 2.192 5.273.084 7.841-1.755 2.139-8.44 7.988-8.44 7.988zM7.709 5.271a3.935 3.935 0 00-2.727 1.068c-1.578 1.498-1.06 3.708.088 5.128 1.306 1.613 5.333 5.204 6.925 6.605 1.583-1.404 5.58-4.993 6.899-6.601 1.195-1.455 1.685-3.603.085-5.122-.726-.689-1.694-1.069-2.728-1.069s-2.001.38-2.728 1.069l-1.539 1.462-1.551-1.473a3.925 3.925 0 00-2.724-1.067z">
-                    </path>
-                </svg>
-                <span>Trip</span>
-            </a>
-            <a href="#">
-                <svg viewBox="0 0 24 24" width="24px" height="24px" class="d Vb UmNoP">
-                    <path
-                        d="M12 2c.539 0 .976.437.976.976v1.032c1.779.21 3.268 1 4.356 2.222 1.271 1.426 1.937 3.372 1.97 5.512.013.755.016 3.706.016 5.381h1.463v1.951H15.77a4.4 4.4 0 01-.336.924 3.545 3.545 0 01-1.2 1.382c-.589.391-1.332.62-2.234.62s-1.645-.229-2.233-.621a3.538 3.538 0 01-1.2-1.382 4.4 4.4 0 01-.336-.924H3.22v-1.951h1.463c0-1.669.002-4.602.015-5.372-.007-2.149.663-4.098 1.944-5.523 1.098-1.222 2.601-2.009 4.383-2.219V2.976A.975.975 0 0112 2zM6.634 17.122h10.732c0-1.675-.003-4.611-.016-5.351-.026-1.763-.573-3.232-1.475-4.245-.891-1-2.187-1.625-3.876-1.625-1.692 0-3.007.627-3.906 1.627-.909 1.012-1.452 2.473-1.444 4.223 0 .001-.015 3.696-.015 5.371zm3.653 1.951l.024.052c.125.249.297.471.538.63.234.156.59.294 1.151.294.562 0 .917-.138 1.151-.294a1.601 1.601 0 00.561-.682h-3.425z">
-                    </path>
-                </svg>
-                <span>Alerts</span>
-            </a>
+        <a href="#">
+          <svg
+            viewBox="0 0 24 24"
+            width="24px"
+            height="24px"
+            class="d Vb UmNoP"
+          >
+            <path
+              d="M12.001 20.729s-6.741-5.85-8.485-8.003c-2.055-2.541-2.018-5.837.089-7.836a5.928 5.928 0 014.104-1.618c1.548 0 3.005.575 4.104 1.618l.174.165.162-.155a5.93 5.93 0 014.104-1.618c1.548 0 3.005.574 4.104 1.618 2.158 2.049 2.192 5.273.084 7.841-1.755 2.139-8.44 7.988-8.44 7.988zM7.709 5.271a3.935 3.935 0 00-2.727 1.068c-1.578 1.498-1.06 3.708.088 5.128 1.306 1.613 5.333 5.204 6.925 6.605 1.583-1.404 5.58-4.993 6.899-6.601 1.195-1.455 1.685-3.603.085-5.122-.726-.689-1.694-1.069-2.728-1.069s-2.001.38-2.728 1.069l-1.539 1.462-1.551-1.473a3.925 3.925 0 00-2.724-1.067z"
+            ></path>
+          </svg>
+          <span>Trip</span>
+        </a>
+        <a href="#">
+          <svg
+            viewBox="0 0 24 24"
+            width="24px"
+            height="24px"
+            class="d Vb UmNoP"
+          >
+            <path
+              d="M12 2c.539 0 .976.437.976.976v1.032c1.779.21 3.268 1 4.356 2.222 1.271 1.426 1.937 3.372 1.97 5.512.013.755.016 3.706.016 5.381h1.463v1.951H15.77a4.4 4.4 0 01-.336.924 3.545 3.545 0 01-1.2 1.382c-.589.391-1.332.62-2.234.62s-1.645-.229-2.233-.621a3.538 3.538 0 01-1.2-1.382 4.4 4.4 0 01-.336-.924H3.22v-1.951h1.463c0-1.669.002-4.602.015-5.372-.007-2.149.663-4.098 1.944-5.523 1.098-1.222 2.601-2.009 4.383-2.219V2.976A.975.975 0 0112 2zM6.634 17.122h10.732c0-1.675-.003-4.611-.016-5.351-.026-1.763-.573-3.232-1.475-4.245-.891-1-2.187-1.625-3.876-1.625-1.692 0-3.007.627-3.906 1.627-.909 1.012-1.452 2.473-1.444 4.223 0 .001-.015 3.696-.015 5.371zm3.653 1.951l.024.052c.125.249.297.471.538.63.234.156.59.294 1.151.294.562 0 .917-.138 1.151-.294a1.601 1.601 0 00.561-.682h-3.425z"
+            ></path>
+          </svg>
+          <span>Alerts</span>
+        </a>
 
-            <a href="signin.html">Signin</a>
-            <a href="#">
-                <svg viewBox="0 0 24 24" width="24px" height="24px" class="d Vb UmNoP">
-                    <path
-                        d="M17.166 15.54h-9.1c-.293 0-1.011-.914-1.011-1.517V13.01h12.923L22 4.922H7.055c0-1.033-.9-2.527-2.527-2.527H2v2.022h2.528c.356 0 .5.466.505.505l.001 9.102c0 .929.579 2.192 1.479 2.932a3.011 3.011 0 00-.468 1.618 3.035 3.035 0 003.033 3.032 3.035 3.035 0 002.86-4.045h2.369a3.035 3.035 0 002.859 4.045 3.035 3.035 0 003.033-3.032 3.036 3.036 0 00-3.033-3.034zM7.055 6.943h12.354l-1.011 4.044H7.055V6.943zm2.023 12.641a1.012 1.012 0 010-2.024 1.013 1.013 0 010 2.024zm8.088 0a1.012 1.012 0 110-2.024 1.012 1.012 0 010 2.024z">
-                    </path>
-                </svg>
-                <span>Cart</span>
-            </a>
-        </div>
-
+        <a href="signin.html">Signin</a>
+        <a href="#">
+          <svg
+            viewBox="0 0 24 24"
+            width="24px"
+            height="24px"
+            class="d Vb UmNoP"
+          >
+            <path
+              d="M17.166 15.54h-9.1c-.293 0-1.011-.914-1.011-1.517V13.01h12.923L22 4.922H7.055c0-1.033-.9-2.527-2.527-2.527H2v2.022h2.528c.356 0 .5.466.505.505l.001 9.102c0 .929.579 2.192 1.479 2.932a3.011 3.011 0 00-.468 1.618 3.035 3.035 0 003.033 3.032 3.035 3.035 0 002.86-4.045h2.369a3.035 3.035 0 002.859 4.045 3.035 3.035 0 003.033-3.032 3.036 3.036 0 00-3.033-3.034zM7.055 6.943h12.354l-1.011 4.044H7.055V6.943zm2.023 12.641a1.012 1.012 0 010-2.024 1.013 1.013 0 010 2.024zm8.088 0a1.012 1.012 0 110-2.024 1.012 1.012 0 010 2.024z"
+            ></path>
+          </svg>
+          <span>Cart</span>
+        </a>
+      </div>
     </div>
     <div id="container">
-        <div id="btn_top">
-            <a class="btn_top btn_top1" href="hotel.html">
-                <span>Hotels</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M20.587 12.139V4.14404H3.424V12.13C2.9797 12.4865 2.62109 12.9381 2.37463 13.4516C2.12817 13.9651 2.00015 14.5274 2 15.097V19.852H3.906V17.947H20.094V19.857H22V15.097C21.9999 14.5298 21.873 13.9698 21.6285 13.458C21.384 12.9462 21.0282 12.4956 20.587 12.139ZM18.681 6.04904V8.83004C17.8366 8.25485 16.8376 7.94939 15.816 7.95404C14.251 7.95404 12.864 8.64404 12 9.70304C11.136 8.64404 9.748 7.95404 8.182 7.95404C7.112 7.95404 6.126 8.27804 5.331 8.82004V6.04904H18.681V6.04904ZM18.423 11.297C18.346 11.292 18.268 11.285 18.189 11.285H13.218C13.656 10.447 14.655 9.85904 15.816 9.85904C16.984 9.85904 17.989 10.452 18.423 11.297V11.297ZM10.78 11.285H5.812C5.731 11.285 5.653 11.292 5.574 11.297C6.008 10.453 7.012 9.85904 8.18 9.85904C9.343 9.85904 10.343 10.447 10.78 11.285V11.285ZM3.906 16.04V15.097C3.906 14.046 4.761 13.192 5.812 13.192H18.188C19.239 13.192 20.093 14.046 20.093 15.097V16.04H3.906Z"
-                        fill="#427067" />
-                </svg>
+      <div id="btn_top">
+        <a class="btn_top btn_top1" href="hotel.html">
+          <span>Hotels</span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.587 12.139V4.14404H3.424V12.13C2.9797 12.4865 2.62109 12.9381 2.37463 13.4516C2.12817 13.9651 2.00015 14.5274 2 15.097V19.852H3.906V17.947H20.094V19.857H22V15.097C21.9999 14.5298 21.873 13.9698 21.6285 13.458C21.384 12.9462 21.0282 12.4956 20.587 12.139ZM18.681 6.04904V8.83004C17.8366 8.25485 16.8376 7.94939 15.816 7.95404C14.251 7.95404 12.864 8.64404 12 9.70304C11.136 8.64404 9.748 7.95404 8.182 7.95404C7.112 7.95404 6.126 8.27804 5.331 8.82004V6.04904H18.681V6.04904ZM18.423 11.297C18.346 11.292 18.268 11.285 18.189 11.285H13.218C13.656 10.447 14.655 9.85904 15.816 9.85904C16.984 9.85904 17.989 10.452 18.423 11.297V11.297ZM10.78 11.285H5.812C5.731 11.285 5.653 11.292 5.574 11.297C6.008 10.453 7.012 9.85904 8.18 9.85904C9.343 9.85904 10.343 10.447 10.78 11.285V11.285ZM3.906 16.04V15.097C3.906 14.046 4.761 13.192 5.812 13.192H18.188C19.239 13.192 20.093 14.046 20.093 15.097V16.04H3.906Z"
+              fill="#427067"
+            />
+          </svg>
+        </a>
 
-            </a>
+        <a class="btn_top btn_top2" href="hotel.html">
+          <span>Restaurant</span>
 
-            <a class="btn_top btn_top2" href="hotel.html">
-                <span>Restaurant</span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.753 21.459L13.251 15.955L10.401 18.806L8.73801 17.144L4.42301 21.459L3.08001 20.115L7.39601 15.799L3.39201 11.796C2.94947 11.3561 2.59857 10.8328 2.35963 10.2564C2.12069 9.68003 1.99846 9.06196 2.00001 8.43799C2.00001 7.16899 2.49401 5.97699 3.39201 5.07999L4.22601 4.24499L11.588 11.607L12.454 10.741C11.355 9.02199 11.677 6.76899 13.366 5.07999L15.904 2.54199L17.247 3.88599L14.709 6.42299C13.924 7.20999 13.455 8.32599 13.857 9.33899L18.28 4.91699L19.623 6.26099L15.194 10.689C15.504 10.819 15.834 10.877 16.171 10.853C16.817 10.81 17.47 10.489 18.009 9.94899C18.8923 9.06727 19.773 8.18294 20.651 7.29599L22 8.63099C22 8.63099 20.759 9.88599 19.353 11.291C18.488 12.156 17.402 12.674 16.296 12.747C15.4125 12.808 14.5334 12.576 13.795 12.087L12.931 12.949L20.097 20.115L18.753 21.459V21.459ZM4.29101 6.99499C4.03392 7.43234 3.89889 7.93067 3.90001 8.43799C3.90001 9.19999 4.19601 9.91599 4.73501 10.453L10.401 16.12L11.907 14.613L4.29101 6.99499V6.99499Z"
+              fill="#5D6C00"
+            />
+          </svg>
+        </a>
 
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M18.753 21.459L13.251 15.955L10.401 18.806L8.73801 17.144L4.42301 21.459L3.08001 20.115L7.39601 15.799L3.39201 11.796C2.94947 11.3561 2.59857 10.8328 2.35963 10.2564C2.12069 9.68003 1.99846 9.06196 2.00001 8.43799C2.00001 7.16899 2.49401 5.97699 3.39201 5.07999L4.22601 4.24499L11.588 11.607L12.454 10.741C11.355 9.02199 11.677 6.76899 13.366 5.07999L15.904 2.54199L17.247 3.88599L14.709 6.42299C13.924 7.20999 13.455 8.32599 13.857 9.33899L18.28 4.91699L19.623 6.26099L15.194 10.689C15.504 10.819 15.834 10.877 16.171 10.853C16.817 10.81 17.47 10.489 18.009 9.94899C18.8923 9.06727 19.773 8.18294 20.651 7.29599L22 8.63099C22 8.63099 20.759 9.88599 19.353 11.291C18.488 12.156 17.402 12.674 16.296 12.747C15.4125 12.808 14.5334 12.576 13.795 12.087L12.931 12.949L20.097 20.115L18.753 21.459V21.459ZM4.29101 6.99499C4.03392 7.43234 3.89889 7.93067 3.90001 8.43799C3.90001 9.19999 4.19601 9.91599 4.73501 10.453L10.401 16.12L11.907 14.613L4.29101 6.99499V6.99499Z"
-                        fill="#5D6C00" />
-                </svg>
-            </a>
+        <a class="btn_top btn_top3" href="hotel.html">
+          <span>Things to Do</span>
 
-            <a class="btn_top btn_top3" href="hotel.html">
-                <span>Things to Do</span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 9.5C12.5523 9.5 13 9.05228 13 8.5C13 7.94772 12.5523 7.5 12 7.5C11.4477 7.5 11 7.94772 11 8.5C11 9.05228 11.4477 9.5 12 9.5Z"
+              fill="#A13000"
+            />
+            <path
+              d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+              fill="#A13000"
+            />
+            <path
+              d="M12 16.5C12.5523 16.5 13 16.0523 13 15.5C13 14.9477 12.5523 14.5 12 14.5C11.4477 14.5 11 14.9477 11 15.5C11 16.0523 11.4477 16.5 12 16.5Z"
+              fill="#A13000"
+            />
+            <path
+              d="M20 6.5V8C18.5 8.7 17.5 10.3 17.5 12C17.5 13.8 18.5 15.3 20 16V17.5H4V16C5.5 15.3 6.5 13.7 6.5 12C6.5 10.2 5.5 8.7 4 8V6.5H20ZM22 4.5H2V9.5C3.4 9.5 4.5 10.6 4.5 12C4.5 13.4 3.4 14.5 2 14.5V19.5H22V14.5C20.6 14.5 19.5 13.4 19.5 12C19.5 10.6 20.6 9.5 22 9.5V4.5Z"
+              fill="#A13000"
+            />
+          </svg>
+        </a>
+        <a class="btn_top btn_top4" href="hotel.html">
+          <span>Holiday Homes</span>
 
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M12 9.5C12.5523 9.5 13 9.05228 13 8.5C13 7.94772 12.5523 7.5 12 7.5C11.4477 7.5 11 7.94772 11 8.5C11 9.05228 11.4477 9.5 12 9.5Z"
-                        fill="#A13000" />
-                    <path
-                        d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
-                        fill="#A13000" />
-                    <path
-                        d="M12 16.5C12.5523 16.5 13 16.0523 13 15.5C13 14.9477 12.5523 14.5 12 14.5C11.4477 14.5 11 14.9477 11 15.5C11 16.0523 11.4477 16.5 12 16.5Z"
-                        fill="#A13000" />
-                    <path
-                        d="M20 6.5V8C18.5 8.7 17.5 10.3 17.5 12C17.5 13.8 18.5 15.3 20 16V17.5H4V16C5.5 15.3 6.5 13.7 6.5 12C6.5 10.2 5.5 8.7 4 8V6.5H20ZM22 4.5H2V9.5C3.4 9.5 4.5 10.6 4.5 12C4.5 13.4 3.4 14.5 2 14.5V19.5H22V14.5C20.6 14.5 19.5 13.4 19.5 12C19.5 10.6 20.6 9.5 22 9.5V4.5Z"
-                        fill="#A13000" />
-                </svg>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.001 2L2.09698 8.6V22H21.904V8.6L12.001 2ZM19.923 20.021H4.07699V9.66L12.001 4.38L19.923 9.66V20.021V20.021Z"
+              fill="#004C6C"
+            />
+            <path
+              d="M9.03598 10.627C8.24888 10.6277 7.49421 10.9406 6.93745 11.497C6.3807 12.0534 6.0673 12.8079 6.06598 13.595C6.06677 14.3825 6.37991 15.1376 6.93669 15.6945C7.49347 16.2515 8.24844 16.5649 9.03598 16.566C9.64829 16.5643 10.2451 16.3731 10.7443 16.0185C11.2435 15.664 11.6207 15.1635 11.824 14.586H13.976V16.565H15.956V14.586H17.938V12.607H11.823C11.6196 12.0296 11.2426 11.5293 10.7436 11.1748C10.2446 10.8203 9.64809 10.6289 9.03598 10.627V10.627ZM9.03598 14.586C8.90237 14.5921 8.7689 14.5711 8.64362 14.5242C8.51835 14.4774 8.40387 14.4056 8.3071 14.3133C8.21033 14.2209 8.13327 14.11 8.08057 13.987C8.02788 13.8641 8.00064 13.7318 8.0005 13.598C8.00037 13.4642 8.02734 13.3319 8.07978 13.2088C8.13223 13.0858 8.20907 12.9746 8.30565 12.8821C8.40224 12.7896 8.51657 12.7176 8.64175 12.6705C8.76693 12.6233 8.90036 12.6021 9.03398 12.608C9.2886 12.6191 9.52909 12.7281 9.7054 12.9121C9.88171 13.0962 9.98025 13.3411 9.9805 13.596C9.98076 13.8509 9.88272 14.096 9.70678 14.2804C9.53085 14.4648 9.29057 14.5742 9.03598 14.586V14.586Z"
+              fill="#004C6C"
+            />
+          </svg>
+        </a>
+        <a class="btn_top btn_top5" href="hotel.html">
+          <span>Travel stories</span>
 
-            </a>
-            <a class="btn_top btn_top4" href="hotel.html">
-                <span>Holiday Homes</span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM4.1 13H7.4C7.4 15.2 7.9 17.3 8.8 19.3C6.2 18.2 4.4 15.8 4.1 13V13ZM7.4 11H4.1C4.4 8.2 6.2 5.8 8.8 4.7C8 6.7 7.5 8.8 7.4 11V11ZM12 20C11 20 9.6 17.2 9.4 13H14.6C14.4 17.2 13 20 12 20V20ZM9.4 11C9.6 6.8 11 4 12 4C13 4 14.4 6.8 14.6 11H9.4ZM19.9 11H16.5C16.5 8.8 16 6.7 15.1 4.7C17.8 5.8 19.6 8.2 19.9 11ZM15.2 19.3C16 17.3 16.5 15.2 16.599 13H20C19.6 15.8 17.8 18.2 15.2 19.3Z"
+              fill="#3C3043"
+            />
+          </svg>
+        </a>
+        <a class="btn_top btn_top6" href="hotel.html">
+          <span>More</span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.5 14.4C5.88071 14.4 7 13.2807 7 11.9C7 10.5193 5.88071 9.40002 4.5 9.40002C3.11929 9.40002 2 10.5193 2 11.9C2 13.2807 3.11929 14.4 4.5 14.4Z"
+              fill="#5D006C"
+            />
+            <path
+              d="M19.5 14.4C20.8807 14.4 22 13.2807 22 11.9C22 10.5193 20.8807 9.40002 19.5 9.40002C18.1193 9.40002 17 10.5193 17 11.9C17 13.2807 18.1193 14.4 19.5 14.4Z"
+              fill="#5D006C"
+            />
+            <path
+              d="M12 14.4C13.3807 14.4 14.5 13.2807 14.5 11.9C14.5 10.5193 13.3807 9.40002 12 9.40002C10.6193 9.40002 9.5 10.5193 9.5 11.9C9.5 13.2807 10.6193 14.4 12 14.4Z"
+              fill="#5D006C"
+            />
+          </svg>
+        </a>
+      </div>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M12.001 2L2.09698 8.6V22H21.904V8.6L12.001 2ZM19.923 20.021H4.07699V9.66L12.001 4.38L19.923 9.66V20.021V20.021Z"
-                        fill="#004C6C" />
-                    <path
-                        d="M9.03598 10.627C8.24888 10.6277 7.49421 10.9406 6.93745 11.497C6.3807 12.0534 6.0673 12.8079 6.06598 13.595C6.06677 14.3825 6.37991 15.1376 6.93669 15.6945C7.49347 16.2515 8.24844 16.5649 9.03598 16.566C9.64829 16.5643 10.2451 16.3731 10.7443 16.0185C11.2435 15.664 11.6207 15.1635 11.824 14.586H13.976V16.565H15.956V14.586H17.938V12.607H11.823C11.6196 12.0296 11.2426 11.5293 10.7436 11.1748C10.2446 10.8203 9.64809 10.6289 9.03598 10.627V10.627ZM9.03598 14.586C8.90237 14.5921 8.7689 14.5711 8.64362 14.5242C8.51835 14.4774 8.40387 14.4056 8.3071 14.3133C8.21033 14.2209 8.13327 14.11 8.08057 13.987C8.02788 13.8641 8.00064 13.7318 8.0005 13.598C8.00037 13.4642 8.02734 13.3319 8.07978 13.2088C8.13223 13.0858 8.20907 12.9746 8.30565 12.8821C8.40224 12.7896 8.51657 12.7176 8.64175 12.6705C8.76693 12.6233 8.90036 12.6021 9.03398 12.608C9.2886 12.6191 9.52909 12.7281 9.7054 12.9121C9.88171 13.0962 9.98025 13.3411 9.9805 13.596C9.98076 13.8509 9.88272 14.096 9.70678 14.2804C9.53085 14.4648 9.29057 14.5742 9.03598 14.586V14.586Z"
-                        fill="#004C6C" />
-                </svg>
-
-            </a>
-            <a class="btn_top btn_top5" href="hotel.html">
-                <span>Travel stories</span>
-
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM4.1 13H7.4C7.4 15.2 7.9 17.3 8.8 19.3C6.2 18.2 4.4 15.8 4.1 13V13ZM7.4 11H4.1C4.4 8.2 6.2 5.8 8.8 4.7C8 6.7 7.5 8.8 7.4 11V11ZM12 20C11 20 9.6 17.2 9.4 13H14.6C14.4 17.2 13 20 12 20V20ZM9.4 11C9.6 6.8 11 4 12 4C13 4 14.4 6.8 14.6 11H9.4ZM19.9 11H16.5C16.5 8.8 16 6.7 15.1 4.7C17.8 5.8 19.6 8.2 19.9 11ZM15.2 19.3C16 17.3 16.5 15.2 16.599 13H20C19.6 15.8 17.8 18.2 15.2 19.3Z"
-                        fill="#3C3043" />
-                </svg>
-            </a>
-            <a class="btn_top btn_top6" href="hotel.html">
-                <span>More</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M4.5 14.4C5.88071 14.4 7 13.2807 7 11.9C7 10.5193 5.88071 9.40002 4.5 9.40002C3.11929 9.40002 2 10.5193 2 11.9C2 13.2807 3.11929 14.4 4.5 14.4Z"
-                        fill="#5D006C" />
-                    <path
-                        d="M19.5 14.4C20.8807 14.4 22 13.2807 22 11.9C22 10.5193 20.8807 9.40002 19.5 9.40002C18.1193 9.40002 17 10.5193 17 11.9C17 13.2807 18.1193 14.4 19.5 14.4Z"
-                        fill="#5D006C" />
-                    <path
-                        d="M12 14.4C13.3807 14.4 14.5 13.2807 14.5 11.9C14.5 10.5193 13.3807 9.40002 12 9.40002C10.6193 9.40002 9.5 10.5193 9.5 11.9C9.5 13.2807 10.6193 14.4 12 14.4Z"
-                        fill="#5D006C" />
-                </svg>
-
-            </a>
-
+      <div id="search_bar">
+        <div class="search_div">
+          <input
+            onclick="sign()"
+            class="search"
+            type="text"
+            placeholder="Where to?"
+          />
         </div>
-        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      </div>
+      <div id="recent_search">
+        <h1>Your resent seraches</h1>
+        <div>
+          <a class="btn_top btn_top1" href="hotel.html">
+            <span>Hotels</span>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.587 12.139V4.14404H3.424V12.13C2.9797 12.4865 2.62109 12.9381 2.37463 13.4516C2.12817 13.9651 2.00015 14.5274 2 15.097V19.852H3.906V17.947H20.094V19.857H22V15.097C21.9999 14.5298 21.873 13.9698 21.6285 13.458C21.384 12.9462 21.0282 12.4956 20.587 12.139ZM18.681 6.04904V8.83004C17.8366 8.25485 16.8376 7.94939 15.816 7.95404C14.251 7.95404 12.864 8.64404 12 9.70304C11.136 8.64404 9.748 7.95404 8.182 7.95404C7.112 7.95404 6.126 8.27804 5.331 8.82004V6.04904H18.681V6.04904ZM18.423 11.297C18.346 11.292 18.268 11.285 18.189 11.285H13.218C13.656 10.447 14.655 9.85904 15.816 9.85904C16.984 9.85904 17.989 10.452 18.423 11.297V11.297ZM10.78 11.285H5.812C5.731 11.285 5.653 11.292 5.574 11.297C6.008 10.453 7.012 9.85904 8.18 9.85904C9.343 9.85904 10.343 10.447 10.78 11.285V11.285ZM3.906 16.04V15.097C3.906 14.046 4.761 13.192 5.812 13.192H18.188C19.239 13.192 20.093 14.046 20.093 15.097V16.04H3.906Z"
+                fill="#427067"
+              />
+            </svg>
+          </a>
 
-        <div id="search_bar">
+          <a class="btn_top btn_top2" href="hotel.html">
+            <span>Restaurant</span>
 
-            <div class="search_div">
-                <input onclick="sign()" class="search" type="text" placeholder="Where to?">
-            </div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.753 21.459L13.251 15.955L10.401 18.806L8.73801 17.144L4.42301 21.459L3.08001 20.115L7.39601 15.799L3.39201 11.796C2.94947 11.3561 2.59857 10.8328 2.35963 10.2564C2.12069 9.68003 1.99846 9.06196 2.00001 8.43799C2.00001 7.16899 2.49401 5.97699 3.39201 5.07999L4.22601 4.24499L11.588 11.607L12.454 10.741C11.355 9.02199 11.677 6.76899 13.366 5.07999L15.904 2.54199L17.247 3.88599L14.709 6.42299C13.924 7.20999 13.455 8.32599 13.857 9.33899L18.28 4.91699L19.623 6.26099L15.194 10.689C15.504 10.819 15.834 10.877 16.171 10.853C16.817 10.81 17.47 10.489 18.009 9.94899C18.8923 9.06727 19.773 8.18294 20.651 7.29599L22 8.63099C22 8.63099 20.759 9.88599 19.353 11.291C18.488 12.156 17.402 12.674 16.296 12.747C15.4125 12.808 14.5334 12.576 13.795 12.087L12.931 12.949L20.097 20.115L18.753 21.459V21.459ZM4.29101 6.99499C4.03392 7.43234 3.89889 7.93067 3.90001 8.43799C3.90001 9.19999 4.19601 9.91599 4.73501 10.453L10.401 16.12L11.907 14.613L4.29101 6.99499V6.99499Z"
+                fill="#5D6C00"
+              />
+            </svg>
+          </a>
         </div>
-        <div id="recent_search">
-            <h1>Your resent seraches</h1>
-           <div>
-            <a class="btn_top btn_top1" href="hotel.html">
-                <span>Hotels</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M20.587 12.139V4.14404H3.424V12.13C2.9797 12.4865 2.62109 12.9381 2.37463 13.4516C2.12817 13.9651 2.00015 14.5274 2 15.097V19.852H3.906V17.947H20.094V19.857H22V15.097C21.9999 14.5298 21.873 13.9698 21.6285 13.458C21.384 12.9462 21.0282 12.4956 20.587 12.139ZM18.681 6.04904V8.83004C17.8366 8.25485 16.8376 7.94939 15.816 7.95404C14.251 7.95404 12.864 8.64404 12 9.70304C11.136 8.64404 9.748 7.95404 8.182 7.95404C7.112 7.95404 6.126 8.27804 5.331 8.82004V6.04904H18.681V6.04904ZM18.423 11.297C18.346 11.292 18.268 11.285 18.189 11.285H13.218C13.656 10.447 14.655 9.85904 15.816 9.85904C16.984 9.85904 17.989 10.452 18.423 11.297V11.297ZM10.78 11.285H5.812C5.731 11.285 5.653 11.292 5.574 11.297C6.008 10.453 7.012 9.85904 8.18 9.85904C9.343 9.85904 10.343 10.447 10.78 11.285V11.285ZM3.906 16.04V15.097C3.906 14.046 4.761 13.192 5.812 13.192H18.188C19.239 13.192 20.093 14.046 20.093 15.097V16.04H3.906Z"
-                        fill="#427067" />
-                </svg>
+      </div>
 
-            </a>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
-            <a class="btn_top btn_top2" href="hotel.html">
-                <span>Restaurant</span>
-
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M18.753 21.459L13.251 15.955L10.401 18.806L8.73801 17.144L4.42301 21.459L3.08001 20.115L7.39601 15.799L3.39201 11.796C2.94947 11.3561 2.59857 10.8328 2.35963 10.2564C2.12069 9.68003 1.99846 9.06196 2.00001 8.43799C2.00001 7.16899 2.49401 5.97699 3.39201 5.07999L4.22601 4.24499L11.588 11.607L12.454 10.741C11.355 9.02199 11.677 6.76899 13.366 5.07999L15.904 2.54199L17.247 3.88599L14.709 6.42299C13.924 7.20999 13.455 8.32599 13.857 9.33899L18.28 4.91699L19.623 6.26099L15.194 10.689C15.504 10.819 15.834 10.877 16.171 10.853C16.817 10.81 17.47 10.489 18.009 9.94899C18.8923 9.06727 19.773 8.18294 20.651 7.29599L22 8.63099C22 8.63099 20.759 9.88599 19.353 11.291C18.488 12.156 17.402 12.674 16.296 12.747C15.4125 12.808 14.5334 12.576 13.795 12.087L12.931 12.949L20.097 20.115L18.753 21.459V21.459ZM4.29101 6.99499C4.03392 7.43234 3.89889 7.93067 3.90001 8.43799C3.90001 9.19999 4.19601 9.91599 4.73501 10.453L10.401 16.12L11.907 14.613L4.29101 6.99499V6.99499Z"
-                        fill="#5D6C00" />
-                </svg>
-            </a>
-
-           </div>
+      <div id="history">
+        <div>
+          <h1>Recently viewed</h1>
         </div>
+        <div id="recent_viewed" class="recent_viewed">
+          <div class="">
+            <img
+              src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/81/e4/d5.jpg"
+              alt=""
+            />
+            <h2>Spiritual Tour of Bodhgaya</h2>
+            <p>Statue</p>
+          </div>
 
-        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
-        <div id="history">
-
-            <div>
-                <h1>Recently viewed</h1>
-            </div>
-            <div id="recent_viewed" class="recent_viewed">
-
-                <div class="">
-                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/81/e4/d5.jpg"
-                        alt="">
-                    <h2>Spiritual Tour of Bodhgaya</h2>
-                    <p>Statue</p>
-                </div>
-
-                <div class="">
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/f3/ed/05/as-the-spring-has-set.jpg?w=700&h=-1&s=1"
-                        alt="">
-                    <h2>Nalanda Rajgir and Bodh Gaya</h2>
-                    <p>Flower park</p>
-                </div>
-                <div class="">
-                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/dc/15/5c.jpg"
-                        alt="">
-                    <h2>Nalanda Rajgir and Bodh Gaya</h2>
-                    <p>Temple</p>
-                </div>
-                <div class="">
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/b9/e6/3a/caption.jpg?w=300&h=300&s=1"
-                        alt="">
-                    <h2>Dana Point Whale Watching</h2>
-                    <p>Water Bodies</p>
-                </div>
-
-
-
-            </div>
+          <div class="">
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/f3/ed/05/as-the-spring-has-set.jpg?w=700&h=-1&s=1"
+              alt=""
+            />
+            <h2>Nalanda Rajgir and Bodh Gaya</h2>
+            <p>Flower park</p>
+          </div>
+          <div class="">
+            <img
+              src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/dc/15/5c.jpg"
+              alt=""
+            />
+            <h2>Nalanda Rajgir and Bodh Gaya</h2>
+            <p>Temple</p>
+          </div>
+          <div class="">
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/b9/e6/3a/caption.jpg?w=300&h=300&s=1"
+              alt=""
+            />
+            <h2>Dana Point Whale Watching</h2>
+            <p>Water Bodies</p>
+          </div>
         </div>
-        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      </div>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
-
-        <div class="patna">
-            <div>
-                <h1>Way to Patna</h1>
-                <p>Book these experiences for a close-up look at Patna.</p>
-            </div>
-            <div id="patnaWay" class="recent_viewd">
-                <div class="">
-                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/c1/44/1b.jpg"
-                        alt="">
-                    <h3>Buddhist Tour From The Birth To Death</h3>
-                    <p></p>
-                    <p>from ₹11,154 per group</p>
-                </div>
-                <div class="">
-                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/83/ea/54.jpg"
-                        alt="">
-                    <h3>Jain Spiritual Tour</h3>
-                    <p></p>
-                    <p>₹49,968.77
-                        per group (up to 2)</p>
-                </div>
-                <div class="">
-                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/dc/15/5c.jpg"
-                        alt="">
-                    <h3>Nalanda Rajgir and Bodh Gaya </h3>
-                    <p></p>
-                    <p>from ₹11,154 per group</p>
-                </div>
-                <div class="">
-                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/dc/15/70.jpg"
-                        alt="">
-                    <h3>Buddhist Pilgrimage Tour </h3>
-                    <p> </p>
-                    <p>from ₹90,925 per adult</p>
-                </div>
-
-
-            </div>
-
+      <div class="patna">
+        <div>
+          <h1>Way to Patna</h1>
+          <p>Book these experiences for a close-up look at Patna.</p>
         </div>
-
-        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
-
-        <div id="add_site">
-            <div class="margin">
-                <h3>Go Out there</h3>
-                <p>Best of the best tours,attraction &activities you wont't want to miss</p>
-                <button>See the list</button>
-            </div>
-            <div>
-                <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2016/08/incredible-india-cover.jpg"
-                    alt="">
-            </div>
-
+        <div id="patnaWay" class="recent_viewd">
+          <div class="">
+            <img
+              src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/c1/44/1b.jpg"
+              alt=""
+            />
+            <h3>Buddhist Tour From The Birth To Death</h3>
+            <p></p>
+            <p>from ₹11,154 per group</p>
+          </div>
+          <div class="">
+            <img
+              src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/83/ea/54.jpg"
+              alt=""
+            />
+            <h3>Jain Spiritual Tour</h3>
+            <p></p>
+            <p>₹49,968.77 per group (up to 2)</p>
+          </div>
+          <div class="">
+            <img
+              src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/dc/15/5c.jpg"
+              alt=""
+            />
+            <h3>Nalanda Rajgir and Bodh Gaya</h3>
+            <p></p>
+            <p>from ₹11,154 per group</p>
+          </div>
+          <div class="">
+            <img
+              src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/dc/15/70.jpg"
+              alt=""
+            />
+            <h3>Buddhist Pilgrimage Tour</h3>
+            <p></p>
+            <p>from ₹90,925 per adult</p>
+          </div>
         </div>
+      </div>
 
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
-        <div class="like">
-            <div>
-                <h1>Scenic autumn spots</h1>
-            </div>
-            <div id="Lake">
-                <div class="lake-child">
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/68/2b/0f/merkmal-des-dal-sees.jpg?w=1200&h=-1&s=1"
-                        alt="">
-                    <h2>Dal Lake</h2>
-                    <p></p>
-                    <p>Bodies of water</p>
-                </div>
-                <div class="lake-child">
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/bb/7e/3d/caption.jpg?w=300&h=300&s=1"
-                        alt="">
-                    <h2>San Diego Whale Watching Cruise</h2>
-                    <p></p>
-                    <p>Bodies of water</p>
-                </div>
-                <div class="lake-child">
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/68/2b/0f/merkmal-des-dal-sees.jpg?w=1200&h=-1&s=1"
-                        alt="">
-                    <h2>Dal Lake</h2>
-                    <p></p>
-                    <p>Bodies of water</p>
-                </div>
-                <div class="lake-child">
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5c/26/40/caption.jpg?w=300&h=300&s=1"
-                        alt="">
-                    <h2>Boat Based Whale Watching </h2>
-                    <p></p>
-                    <p>Bodies of water</p>
-                </div>
-                <div class="lake-child">
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/68/2b/0f/merkmal-des-dal-sees.jpg?w=1200&h=-1&s=1"
-                        alt="">
-                    <h2>Dal Lake</h2>
-                    <p></p>
-                    <p>Bodies of water</p>
-                </div>
-
-
-            </div>
-
+      <div id="add_site">
+        <div class="margin">
+          <h3>Go Out there</h3>
+          <p>
+            Best of the best tours,attraction &activities you wont't want to
+            miss
+          </p>
+          <button>See the list</button>
         </div>
+        <div>
+          <img
+            src="https://assets.traveltriangle.com/blog/wp-content/uploads/2016/08/incredible-india-cover.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="like">
+        <div>
+          <h1>Scenic autumn spots</h1>
+        </div>
+        <div id="Lake">
+          <div class="lake-child">
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/68/2b/0f/merkmal-des-dal-sees.jpg?w=1200&h=-1&s=1"
+              alt=""
+            />
+            <h2>Dal Lake</h2>
+            <p></p>
+            <p>Bodies of water</p>
+          </div>
+          <div class="lake-child">
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/bb/7e/3d/caption.jpg?w=300&h=300&s=1"
+              alt=""
+            />
+            <h2>San Diego Whale Watching Cruise</h2>
+            <p></p>
+            <p>Bodies of water</p>
+          </div>
+          <div class="lake-child">
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/68/2b/0f/merkmal-des-dal-sees.jpg?w=1200&h=-1&s=1"
+              alt=""
+            />
+            <h2>Dal Lake</h2>
+            <p></p>
+            <p>Bodies of water</p>
+          </div>
+          <div class="lake-child">
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5c/26/40/caption.jpg?w=300&h=300&s=1"
+              alt=""
+            />
+            <h2>Boat Based Whale Watching</h2>
+            <p></p>
+            <p>Bodies of water</p>
+          </div>
+          <div class="lake-child">
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/68/2b/0f/merkmal-des-dal-sees.jpg?w=1200&h=-1&s=1"
+              alt=""
+            />
+            <h2>Dal Lake</h2>
+            <p></p>
+            <p>Bodies of water</p>
+          </div>
+        </div>
+      </div>
     </div>
-
 
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
     <div id="explore">
-        <h2>More to Explore</h2>
-        <div class="explore">
-            <div>
-                <div><img
-                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/be/f9/13/caption.jpg?w=800&h=-1&s=1&cx=4128&cy=2752&chk=v1_366898c67adfaa1ca2a5"
-                        alt=""></div>
-                <h3>From SastaSafar</h3>
-                <p>5 beautiful hill station in South India</p>
-            </div>
-            <div>
-                <div><img
-                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/bf/21/0f/caption.jpg?w=800&h=-1&s=1&cx=2880&cy=1920&chk=v1_d206a284991363e391da"
-                        alt=""></div>
-                <h3>From SastaSafar</h3>
-                <p>11 beautiful places in India that have to be seen to be believed</p>
-            </div>
-            <div>
-                <div><img
-                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/c8/2e/9a/2520956e-5665-4e9f.jpg?w=400&h=-1&s=1"
-                        alt=""></div>
-                <h3>From SastaSafar</h3>
-                <p>Best time to visit Dubai for great weather and deals</p>
-            </div>
+      <h2>More to Explore</h2>
+      <div class="explore">
+        <div>
+          <div>
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/be/f9/13/caption.jpg?w=800&h=-1&s=1&cx=4128&cy=2752&chk=v1_366898c67adfaa1ca2a5"
+              alt=""
+            />
+          </div>
+          <h3>From SastaSafar</h3>
+          <p>5 beautiful hill station in South India</p>
         </div>
-
-
+        <div>
+          <div>
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/bf/21/0f/caption.jpg?w=800&h=-1&s=1&cx=2880&cy=1920&chk=v1_d206a284991363e391da"
+              alt=""
+            />
+          </div>
+          <h3>From SastaSafar</h3>
+          <p>
+            11 beautiful places in India that have to be seen to be believed
+          </p>
+        </div>
+        <div>
+          <div>
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/c8/2e/9a/2520956e-5665-4e9f.jpg?w=400&h=-1&s=1"
+              alt=""
+            />
+          </div>
+          <h3>From SastaSafar</h3>
+          <p>Best time to visit Dubai for great weather and deals</p>
+        </div>
+      </div>
     </div>
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
-
     <div id="destination">
-        <div>
-            <h2>Top destinations for beach lovers</h2>
-            <h4>Recommended based on your activity</h4>
+      <div>
+        <h2>Top destinations for beach lovers</h2>
+        <h4>Recommended based on your activity</h4>
+      </div>
+      <div class="desbox">
+        <div class="des-child">
+          <div>
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/60/b0/bd/bora-bora.jpg?w=600&h=400&s=1"
+              alt=""
+            />
+          </div>
         </div>
-        <div class="desbox">
-
-            <div class="des-child">
-                <div>
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/60/b0/bd/bora-bora.jpg?w=600&h=400&s=1"
-                        alt="">
-                </div>
-
-            </div>
-            <div class="des-child">
-                <div>
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/33/f7/dd/caption.jpg?w=600&h=-1&s=1"
-                        alt="">
-                </div>
-
-            </div>
-
-            <div class="des-child">
-                <div>
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/60/b0/bd/bora-bora.jpg?w=600&h=400&s=1"
-                        alt="">
-                </div>
-
-            </div>
-
-            <div class="des-child">
-                <div>
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/60/b0/bd/bora-bora.jpg?w=600&h=400&s=1"
-                        alt="">
-                </div>
-
-            </div>
+        <div class="des-child">
+          <div>
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/33/f7/dd/caption.jpg?w=600&h=-1&s=1"
+              alt=""
+            />
+          </div>
         </div>
 
+        <div class="des-child">
+          <div>
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/60/b0/bd/bora-bora.jpg?w=600&h=400&s=1"
+              alt=""
+            />
+          </div>
+        </div>
 
+        <div class="des-child">
+          <div>
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/60/b0/bd/bora-bora.jpg?w=600&h=400&s=1"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div id="bottom">
-        <div class="poster_logo">
-            <img src="image/logo.png" alt="">
-            <h1>Travellers' Choice Best of the Best</h1>
-            <button>See the winners</button>
+      <div class="poster_logo">
+        <img src="image/logo.png" alt="" />
+        <h1>Travellers' Choice Best of the Best</h1>
+        <button>See the winners</button>
+      </div>
 
-        </div >
-      
-            <img class="poster"
-            src="https://static.tacdn.com/img2/brand/feed/tc_cards_desktop2x.jpeg" alt="">
-       
+      <img
+        class="poster"
+        src="https://static.tacdn.com/img2/brand/feed/tc_cards_desktop2x.jpeg"
+        alt=""
+      />
     </div>
-
-</body>
-
+  </body>
 </html>
-<script>
-
-
-</script>
+<script></script>

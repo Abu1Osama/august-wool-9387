@@ -1,162 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-        #create {
-            /* border: 1px solid green; */
-            width: 500px;
-            margin: auto;
-            padding: 60px;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-        }
+    <link rel="stylesheet" href="signin.css" />
+  </head>
 
-        div {
-            margin-top: 15px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            /* width: 400px; */
-            margin: auto;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        .name {
-            display: flex;
-            flex-direction: column;
-
-
-        }
-
-        .moj {
-            display: flex;
-            flex-direction: column;
-            width: 47%;
-        }
-
-        input {
-            padding: 4px 4px 4px 8px;
-            border: 2px solid rgb(238, 235, 235);
-            height: 40px;
-            border-radius: 6px;
-        }
-
-        .text {
-            margin-top: 8px;
-            margin-bottom: 8px;
-            text-align: left;
-            font-weight: 700;
-
-        }
-
-        img {
-            width: 20%;
-            vertical-align: text-top;
-        }
-
-        .btn {
-
-            background: #000;
-            border-radius: 28px;
-            padding: 18px 10px;
-            font-size: 16px;
-            color: white;
-            display: block;
-            margin: auto;
-            width: 60%;
-        }
-
-        .line {
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 16px;
-        }
-
-        #location {
-            text-align: center;
-        }
-
-        a {
-            font-weight: 600;
-            text-decoration: none;
-        }
-    </style>
-</head>
-
-<body>
+  <body>
     <div id="create">
-        <div>
-            <img src="image/logo.png" alt="">
+      <div>
+        <img src="image/logo.png" alt="" />
+      </div>
+      <div>
+        <h1>Welcome Back</h1>
+      </div>
+      <form id="login_form" action="#">
+        <div class="name">
+          <label class="text" for="">Email address</label>
+
+          <input type="text" id="email" placeholder="Email" required />
         </div>
+        <label class="text" for="">Password</label>
+
+        <input type="password" id="password" placeholder="Password" required />
+
         <div>
-            <h1> Welcome Back</h1>
+          <button onclick="signin()" class="btn">Log in</button>
         </div>
-        <form id="login_form" action="#">
-            <div class="name">
-
-
-                <label class="text" for="">Email address</label>
-
-                <input type="text" id="email" placeholder="Email" required />
-            </div>
-            <label class="text" for="">Password</label>
-
-            <input type="password" id="password" placeholder="Password" required />
-
-            <div>
-                <button onclick="signin()" class="btn">Log in</button>
-            </div>
-            <span class="line">Not a member? </span>
-            <div id="location">
-                <a href="signup.html">join</a>
-                <span>to unlock the best of SastaSafar </span>
-            </div>
-
-
-
-
-        </form>
+        <span class="line">Not a member? </span>
+        <div id="location">
+          <a href="signup.html">join</a>
+          <span>to unlock the best of SastaSafar </span>
+        </div>
+      </form>
     </div>
-
-
-
-</body>
-
+  </body>
 </html>
-<script>
-    let cred = JSON.parse(localStorage.getItem("cred"))
-    let x = document.getElementById("login_form")
-    console.log(x.action);
-    function ok(data, em, ps) {
-        let success = false
-        data.forEach(element => {
-            let { email, password } = element
-            if (email == em && password == ps) {
-                success = true
-            }
-        });
-        if(success){
-            alert("Login success")
-            x.action="index.html"
-        }else{
-            alert("Wrong credential")
-        }
-    }
-    function signin() {
-        let email_inp = document.getElementById("email").value
-        let pass_inp = document.getElementById("password").value
-        ok(cred, email_inp, pass_inp)
-
-
-
-    }
-
-
-
-</script>
+<script src="signin.js"></script>
