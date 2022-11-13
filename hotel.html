@@ -28,7 +28,7 @@
             background: white;
             width: 100%;
             top: 0;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(45px);
             z-index: 5;
             left: 0;
@@ -1153,14 +1153,15 @@
         x.forEach((element, i) => {
             let page = document.createElement("div")
             page.id = "page"
+            page.onclick = function open() {
+                op(element)
+
+            }
             let image_div = document.createElement("div")
             image_div.id = "left_box"
             let image = document.createElement("img")
             image.id = "mainLogo"
-            image.onclick = function open() {
-                op(element)
-
-            }
+           
             image.setAttribute("src", element.image)
             image.style.cursor = "pointer"
 
