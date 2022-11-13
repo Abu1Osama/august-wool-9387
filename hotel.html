@@ -18,33 +18,33 @@
 
         #nav {
             display: flex;
-    /* height: 100px; */
-    justify-content: space-between;
-    /* margin: auto; */
-    font-weight: 800;
-    padding: 10px;
-    align-items: center;
-    position: fixed;
-    background: white;
-    width: 100%;
-    top: 0;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(45px);
-    z-index: 5;
-    left: 0;
-    box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+            /* height: 100px; */
+            justify-content: space-between;
+            /* margin: auto; */
+            font-weight: 800;
+            padding: 10px;
+            align-items: center;
+            position: fixed;
+            background: white;
+            width: 100%;
+            top: 0;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(45px);
+            z-index: 5;
+            left: 0;
+            box-sizing: border-box;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
         }
 
 
         .bar {
             display: flex;
-    align-items: center;
-    justify-content: right;
-    gap: 30px;
-}
+            align-items: center;
+            justify-content: right;
+            gap: 30px;
+        }
 
-        
+
 
         .bar a {
             display: flex;
@@ -150,10 +150,10 @@
 
         .logo {
             display: flex;
-    align-items: center;
-    width: 60%;
-    margin-left: 20px;
-}
+            align-items: center;
+            width: 60%;
+            margin-left: 20px;
+        }
 
         /* a {
             border: 1px solid grey;
@@ -161,7 +161,7 @@
             border-radius: 10px;
         } */
 
-        
+
 
         input {
             border: 1px solid rgb(201, 198, 198);
@@ -187,19 +187,26 @@
             margin-top: 100px;
         }
 
-        @media screen and (min-width:701px) and (max-width:1000px) {
-      /* Here Write all the necessery styles for Medium Screen size  */
-      
-      
 
-  }
-    
 
-    @media screen and (min-width:100px) and (max-width:700px) {
-      /* Here Write all the necessery styles for Small Screen size  */
-     
-   
-    }
+
+
+        @media screen and (min-width:100px) and (max-width:700px) {
+
+            /* Here Write all the necessery styles for Small Screen size  */
+            .bar {
+                display: none;
+
+            }
+            #page{
+                flex-direction: column;
+            }
+            #left_box,#right_box{
+                width: 100%;
+            }
+
+
+        }
     </style>
 </head>
 
@@ -1210,7 +1217,7 @@
 
     }
     function op(ele) {
-        localStorage.setItem("hotal-data",JSON.stringify(ele))
+        localStorage.setItem("hotal-data", JSON.stringify(ele))
         window.location = "hotel_details.html"
     }
 
