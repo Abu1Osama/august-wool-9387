@@ -54,7 +54,7 @@
           <span>Alerts</span>
         </a>
 
-        <a href="signin.html">Signin</a>
+        <a href="signin.html">🔒 Signin</a>
         <a href="#">
           <svg
             viewBox="0 0 24 24"
@@ -68,7 +68,9 @@
           </svg>
           <span>Cart</span>
         </a>
+        <div onclick="menu()"  class="close">❌</div>
       </div>
+      <div id="samm" onclick="menu()" class="menuu">✅</div>
     </div>
     <div id="container">
       <div id="btn_top">
@@ -503,4 +505,15 @@
     </div>
   </body>
 </html>
-<script></script>
+<script>
+
+function menu(){
+  if (document.querySelector(".bar").classList.contains("open")) {
+          document.querySelector(".bar").classList.remove("open")
+      }
+      else{
+          document.querySelector(".bar").classList.add("open")
+      }
+}
+
+</script>

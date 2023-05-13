@@ -416,6 +416,12 @@ p {
   font-weight: 600;
 }
 
+.menuu {
+  display: none;
+}
+
+
+
 @media screen and (min-width: 701px) and (max-width: 1000px) {
   /* Here Write all the necessery styles for Medium Screen size  */
   #recent_viewed {
@@ -487,9 +493,9 @@ p {
     width: 100%;
   }
 
-  .bar {
+  /* .bar {
     display: none;
-  }
+  } */
 
   #btn_top {
     flex-wrap: wrap;
@@ -539,4 +545,38 @@ p {
   .explore p {
     padding: 0px 10px;
   }
+
+  .menuu {
+    display: block;
+  }
+  .open{
+    right: 0px !important;
+
+  }
+
+  .bar {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    width: 50%;  
+    flex-direction: column;
+    align-items: flex-start;
+    /* background-color: teal; */
+    background-color: white;
+    height: 100vh;
+    transition:2s right ;
+    box-sizing: border-box;
+    z-index: 2;
+    padding: 20px 10px;
+  }
+  .close{
+    position:absolute;
+    right: 10px;
+    top: 5px;
+  }
+  .logo img{
+    height: 35px;
+    width: 118px;
+  }
+
 }
