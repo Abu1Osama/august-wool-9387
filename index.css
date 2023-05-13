@@ -419,6 +419,9 @@ p {
 .menuu {
   display: none;
 }
+.close{
+  display: none;
+}
 
 
 
@@ -456,6 +459,40 @@ p {
 
   .lake-child {
     width: 100%;
+  }
+  
+  .menuu {
+    display: block;
+  }
+  .open{
+    right: 0px !important;
+
+  }
+
+  .bar {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    width: 20%;  
+    flex-direction: column;
+    align-items: flex-start;
+    /* background-color: teal; */
+    background-color: white;
+    height: 100vh;
+    transition:2s right ;
+    box-sizing: border-box;
+    z-index: 2;
+    padding: 20px 10px;
+  }
+  .close{
+    display: block;
+    position:absolute;
+    right: 10px;
+    top: 5px;
+  }
+  .logo img{
+    height: 35px;
+    width: 118px;
   }
 }
 
@@ -570,6 +607,7 @@ p {
     padding: 20px 10px;
   }
   .close{
+    display: block;
     position:absolute;
     right: 10px;
     top: 5px;
